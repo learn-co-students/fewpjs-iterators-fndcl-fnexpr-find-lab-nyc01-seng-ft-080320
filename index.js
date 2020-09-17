@@ -5,7 +5,8 @@ function testFunc() {
 }
 
 const superbowlWin = arrOfObjects => {
-    let win =  arrOfObjects.find(obj => obj.result === "W")
+    let win =  arrOfObjects.find(function(obj){
+        return obj.result === "W"})
         if(!!win){
             return win.year
         } else {
